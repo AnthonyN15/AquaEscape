@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* BASE TEXT FONTS */
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "poppins", Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* TRADITIONAL TYPOGRAPHIC SCALE */
 h1 {
-  font-size: 3em;
+  font-size: 6em;
   line-height: 1;
 }
 
@@ -110,7 +110,7 @@ hr {
 /* SECTION HEADING */
 .section-heading {
   font-size: 1em;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "poppins", Helvetica, Arial, sans-serif;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -121,6 +121,19 @@ hr {
   position: absolute;
   top: -9999px;
   left: -9999px;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.no_padding-right {
+  padding: 0;
+  margin: 0;
 }
 
 /* BUTTONS */
@@ -157,9 +170,15 @@ body {
 }
 
 /* CONTAINER */
+.wide-container {
+  margin: 0 auto;
+  max-width: 1600px;
+  padding: 0 1em;
+}
+
 .container {
   margin: 0 auto;
-  max-width: 10000px;
+  max-width: 1000px;
   padding: 0 1em;
 }
 
@@ -191,6 +210,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 3em;
+  width: 100%;
 }
 .row > * {
   margin: 1%;
@@ -269,9 +289,8 @@ body {
 
 /* STRUCTURE */
 .site-header {
-  position: absolute;
   width: 100%;
-  padding: 1em;
+  padding: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,6 +320,10 @@ body {
   max-width: 40px;
   margin-right: 0.5em;
 }
+.site-header .logo img {
+  width: 34px;
+  height: 34px;
+}
 
 /* SITE FOOTER */
 .site-footer {
@@ -329,7 +352,7 @@ section {
 
 /* HERO SECTION */
 .hero {
-  background-image: url("../img/aquarium_header.jpg");
+  background-image: url("../img/aquarium_header.png");
   background-size: cover;
   background-position: center;
   padding: 6em 0;
@@ -341,21 +364,80 @@ section {
       -ms-flex-align: center;
           align-items: center;
 }
-.hero .container {
-  width: 100%;
-}
-.hero h1 {
+.hero .container h1 {
+  padding-top: 1em;
   margin-bottom: 0.25em;
 }
-.hero p {
+.hero .container .button {
+  text-align: center;
+  width: 150px;
+}
+.hero .container p {
   margin: 1em 0;
+}
+
+/* aquascapes section */
+#aquascapes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.forums {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#section03 .button {
+  width: 300px;
+}
+
+/* SECTION 4 SECTION */
+#section04 {
+  background: url("../img/about_image.png") no-repeat;
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  clear: both;
+}
+
+.about {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1em 2em;
+}
+
+.one-half.text-right h2 {
+  margin-right: 0.73em;
+}
+
+.padding-right {
+  padding-right: 10em;
 }
 
 /* SITE-HEADER SITE-NAV */
 .site-header .site-nav .menu-button {
   position: absolute;
-  top: 0.75em;
-  right: 0.5em;
+  top: 2.5em;
+  right: 3em;
   color: white;
   margin: 0;
   font-size: 1.5em;
@@ -504,8 +586,8 @@ section {
           transform: translate(50px, 0);
 }
 #section01[data-sectionstate=active] .one-half:nth-child(2) {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  -webkit-transform: translate(25px, 0);
+          transform: translate(25px, 0);
 }
 
 #section02 .one-half:nth-child(1) {

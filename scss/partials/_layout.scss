@@ -5,9 +5,15 @@ body {
 }
 
 /* CONTAINER */
+.wide-container {
+    margin: 0 auto;
+    max-width: 1600px;    
+    padding: 0 1em;
+}
+
 .container {
     margin: 0 auto;
-    max-width: 10000px;    
+    max-width: 1000px;    
     padding: 0 1em;
 }
 
